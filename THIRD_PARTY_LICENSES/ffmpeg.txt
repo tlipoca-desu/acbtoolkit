@@ -1,0 +1,47 @@
+================================================================================
+ffmpeg
+================================================================================
+
+This project uses ffmpeg as an external program for encoding, mixing and
+concatenation. It is invoked as a separate process; no ffmpeg source code is
+included in, is linked into, or is statically combined with this repository,
+and this repository does not distribute any ffmpeg binary.
+
+Project:  https://ffmpeg.org/
+Legal:    https://ffmpeg.org/legal.html
+Sources:  https://ffmpeg.org/download.html
+
+--------------------------------------------------------------------------------
+Licensing
+--------------------------------------------------------------------------------
+
+ffmpeg is free software, licensed under the GNU Lesser General Public License
+(LGPL) version 2.1 or later by default, with optional parts available under the
+GNU General Public License (GPL) version 2 or later.
+
+Because ffmpeg is highly configurable at build time, the exact licence of any
+given build depends on the options and external libraries that were enabled
+when it was compiled. Notably, builds that enable GPL-only components (such as
+libx264 or libmp3lame) are licensed under the GPL as a whole, while a minimal
+build may remain LGPL.
+
+The responsibility for determining the licence of a particular ffmpeg build
+therefore rests with that build's distributor, not with this project.
+
+--------------------------------------------------------------------------------
+Installation and compliance
+--------------------------------------------------------------------------------
+
+ffmpeg is installed by the user and is not bundled with this project. Users are
+responsible for obtaining a build whose licence is compatible with their
+intended use, and for complying with that licence.
+
+If you redistribute a build of ffmpeg, or software that incorporates it, you
+must comply with the terms of the applicable licence — including the
+requirements to provide the corresponding source code and to preserve
+copyright notices. Consult https://ffmpeg.org/legal.html for details.
+
+Upstream copyright holders and licence texts are distributed with each ffmpeg
+build. Refer to the source distribution or the build you installed for the
+authoritative text.
+================================================================================

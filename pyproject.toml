@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acbtoolkit"
+version = "0.1.0"
+description = "General-purpose CRIWARE ACB/AWB audio container parser and data-block reassembler"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = ["criware", "acb", "awb", "hca", "vgmstream", "game-audio",
+            "container", "audio"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+]
+# Deliberately empty: everything here is standard library.  The two programs
+# that do the actual decoding/encoding are external and located at runtime.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/tlipoca-desu/acbtoolkit"
+Source = "https://github.com/tlipoca-desu/acbtoolkit"
+Issues = "https://github.com/tlipoca-desu/acbtoolkit/issues"
+
+[project.scripts]
+acbtoolkit = "acbtoolkit.cli:main"
+
+[tool.setuptools]
+packages = ["acbtoolkit"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

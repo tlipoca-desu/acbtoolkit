@@ -1,0 +1,48 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Tool binaries: download vgmstream/ffmpeg yourself, never commit them
+tools/
+bin/
+
+# Default output location (acbtoolkit output/<kind>/)
+output/
+output_songs/
+
+# Container files and audio must never be committed: this repo ships no media
+*.acb
+*.awb
+*.acf
+*.hca
+*.mp3
+*.flac
+*.wav
+*.m4a
+*.ogg
+*.opus
+
+# Keep example/reference snippets that were checked in on purpose
+!docs/examples/*.json
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Test / lint artifacts
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
